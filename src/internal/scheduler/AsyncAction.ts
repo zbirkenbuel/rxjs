@@ -114,7 +114,7 @@ export class AsyncAction<T> extends Action<T> {
     let errorValue: any;
     try {
       this.work(state);
-    } catch (e) {
+    } catch (e: any) {
       errored = true;
       errorValue = (!!e && e) || new Error(e);
     }
