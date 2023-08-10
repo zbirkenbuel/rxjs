@@ -117,7 +117,7 @@ export class AsyncAction<T> extends Action<T> {
     let errorValue: any;
     try {
       this.work(state);
-    } catch (e) {
+    } catch (e: any) {
       errored = true;
       // HACK: Since code elsewhere is relying on the "truthiness" of the
       // return here, we can't have it return "" or 0 or false.
